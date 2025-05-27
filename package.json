@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon dist/server.js",
     "build": "tsc --project tsconfig.server.json",
-    "build_all": "tsc --project tsconfig.server.json && tsc --project tsconfig.client.json",
+    "build_all": "npm install express socket.io nanoid && npm install --save-dev typescript @types/node @types/express @types/socket.io && tsc --project tsconfig.server.json && tsc --project tsconfig.client.json",
     "start_server": "tsc --project tsconfig.server.json && tsc --project tsconfig.client.json && nodemon dist/server.js"
   },
   "author": "",
