@@ -1,0 +1,35 @@
+{
+  "name": "connect4",
+  "version": "1.0.0",
+  "description": "online connect4!",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon dist/server.js",
+    "build": "tsc --project tsconfig.server.json",
+    "build_all": "tsc --project tsconfig.server.json && tsc --project tsconfig.client.json",
+    "start_server": "tsc --project tsconfig.server.json && tsc --project tsconfig.client.json && nodemon dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.19",
+    "@types/socket.io": "^3.0.1",
+    "@types/socket.io-client": "^1.4.36",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "undici-types": "^7.9.0"
+  },
+  "dependencies": {
+    "engine.io-client": "^6.6.3",
+    "express": "^5.1.0",
+    "nanoid": "^5.1.5",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^11.1.0"
+  }
+}

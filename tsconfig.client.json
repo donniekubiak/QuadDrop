@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2024",
+        "module": "NodeNext",
+        "rootDir": "./client/src",
+        "outDir": "./client/dist",
+        "strict": true,
+        "moduleResolution": "nodenext"
+    },
+    "include": ["client/src"],
+    "types": ["socket.io-client", "undici-types"]
+    
+}

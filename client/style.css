@@ -1,0 +1,188 @@
+.roboto-slab-font {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: #253443;
+    color: white;
+    margin: 0;
+    font-family: 'Roboto Slab';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    margin: 0;
+}
+
+button {
+    appearance: none;         /* Remove default browser styles (mostly for WebKit) */
+    -webkit-appearance: none; /* WebKit-specific */
+    -moz-appearance: none;    /* Firefox-specific */
+    background: none;         /* Remove background if you want to style it yourself */
+    border: none;             /* Remove border if restyling */
+    color: white;
+    background-color: #2c3e50;
+    border: 2px solid black;
+    border-radius: 8%;
+    border-color: black;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+    font-family: 'Roboto Slab';
+}
+
+textarea{
+    appearance: none;         /* Remove default browser styles (mostly for WebKit) */
+    -webkit-appearance: none; /* WebKit-specific */
+    -moz-appearance: none;    /* Firefox-specific */
+    background: none;         /* Remove background if you want to style it yourself */
+    border: none;             /* Remove border if restyling */
+    background-color: rgb(207, 207, 207);
+    /*box-shadow: inset 5px 5px 0px gray;*/
+    height: 30px;
+    line-height: 30px;
+    color: #253443;
+    border: 2px solid black;
+    border-radius: 3%;
+    border-color: black;
+    font-size: 1rem;
+    resize: none;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s
+}
+
+textarea:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 white;
+    border: 4px solid rgb(207, 207, 207);
+}
+
+button:hover{
+    transform: translateY(-4px);
+}
+
+.playerEntry {
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    border: 3px white;
+   border-width: 3px;
+    border-radius: 5%;
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+    align-content: center;
+    margin: 0% auto 1% auto;
+}
+
+.winOverlay{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.winOverlay.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c3e50;
+  border-radius: 4px;
+}
+
+/* Common piece style */
+.piece {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Specific colors */
+.empty {
+  background-color: black;
+}
+
+.player0 {
+  background-color: rgb(42, 241, 69);
+}
+
+.player1 {
+  background-color: rgb(182, 0, 182);
+}
+.col-button {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background-color: transparent;
+  border: 1px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.1s;
+}
+
+.col-button:hover {
+  transform: scale(1.2);
+  color: gold;
+}
+
+.grid {
+  margin-top: 4px;
+}
+
+.container {
+  display: flex;
+    width: 100%;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  flex-direction: column;
+  margin: 5% auto;
+  height: 50vh;
+}
+
+.mid-div {
+  width: 75%;
+  height: auto;
+  background: #1f2021;
+  border-radius: 8px;
+    justify-content: center;  /* center horizontally */
+    margin: 15px auto;
+    text-align: center;
+  align-items: center;      /* center vertically */
+}
+
+@keyframes dropIn {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animated-drop {
+  animation: dropIn 0.4s ease-out;
+}

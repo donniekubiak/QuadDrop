@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang = "en" class="container">
+    <script> var exports = {}; </script>
+    <script src="socket.io-client"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./dist/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lobby</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <div id = "landingScreen" class = "mid-div">
+        <h1 style="width: 100%; text-align: center;">QuadDrop</h1>
+        <div class = "mid-div">
+        <textarea id="userName" spellcheck="false">Username...</textarea>
+        <textarea id="roomCode" spellcheck="false">Room Code...</textarea>
+        </div><div class = "mid-div">
+        <button id="createRoom">Create Room</button>
+        <button id="joinRoom">Join Room</button>
+        </div>
+    </div>
+    <div id = "lobbyScreen" style = "display: none" class = "mid-div">
+        <h1>Lobby</h1>
+        <p id="lobbyRoomCode">Room Code: </p>
+        <menu id="userList" style="width: 70%; text-align: center; margin: 0 auto;">Users:
+        </menu>
+        <button id="startGame">Start Game</button>
+    </div>
+    <div id = "gameScreen" style = "display: none; align-items: center;" class = "mid-div">
+        <h1 id="gameStatus">Waiting for Opponent...</h1>
+        <div id = "gameGrid" style="width: 307px; text-align: center; display: flex; flex-direction: column; align-content: center; margin: 0 auto;"></div>
+        <div id = "winScreen" class="winOverlay">
+            <h1 id = "winnerName">wins!</h1>
+            <button id = "restart">Restart</button>
+        </div>
+    </div>
+</html>
