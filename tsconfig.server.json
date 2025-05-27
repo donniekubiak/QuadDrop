@@ -4,8 +4,14 @@
         "module": "CommonJS",
         "rootDir": "./server",
         "outDir": "./dist",
+        "moduleResolution": "node",
+        "typeRoots": ["./node_modules/@types"],
         "strict": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "paths": {
+        "*": ["node_modules/*"]
+    }
     },
     "include": ["server/**/*"]
 }
